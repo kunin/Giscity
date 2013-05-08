@@ -5,23 +5,26 @@
 		<title>Геоинформационные технологии</title>
 
 		<link href="style/style.less" rel="stylesheet/less" type="text/css" />
-		<script type="text/javascript" src="less.js"></script>
-		<script type="text/javascript" src="javascript.js">
+		<script type="text/javascript" src="script/less.js"></script>
+		<script type="text/javascript" src="script/slider1.js" charset="utf-8">
+			
 		</script>
 		
 	</head>
-	<body>
+	<body onload="alert (countElements(document, 'main'))">
 		
 		<div class="main">
 			<div class="menu">
-				<ul class="menu" >
-					<li><a href="#">company</a></li>
-					<li><a href="#">services and solutions</a></li>
-					<li><a href="#">projects</a></li>
-					<li><a href="#">news</a></li>
-					<li><a href="#">article</a></li>
-					<li><a href="#">contact</a></li>
-				</ul>
+				<div class="menu-inside">
+					<ul class="menu" >
+						<li><a href="#">company</a></li>
+						<li><a href="#">services and solutions</a></li>
+						<li><a href="#">projects</a></li>
+						<li><a href="#">news</a></li>
+						<li><a href="#">article</a></li>
+						<li><a href="#">contact</a></li>
+					</ul>
+				</div>
 			</div>
 		
 			<div class="top-block">
@@ -29,36 +32,32 @@
 					<li><a href="#">rus</a></li>
 					<li><a href="#">eng</a></li>
 				</ul>
-				<div class="logo">
-					GISCITY геоинформационные системы
-				</div>
+				<a class="logo" href="#">GISCITY геоинформационные системы</a>
 				<div class="slider">
 					<div class="first-slide">
-						<h2>Карты и базы геоданных по городам регионам России.</h2>
+						<h3>Карты и базы геоданных по городам регионам России.</h3>
 						<p>Оказываем помощь в получении картографической информации в исходных геонформационных наборах гис слоев (ArcGis - .shp, Map-Info - .tab и др.). Предоставляем интересующие пространственные данные в векторном формате с учетом ваших целей и задач.</p>
 						<a href="#">подробнее</a>
 					</div>
 					<div class="second-slide">
-						<h2>Отраслевые геоинформационные системы.</h2>
+						<h3>Отраслевые геоинформационные системы.</h3>
 						<p>Создаем геоинформационные системы для решения различных задач государственных структур, бизнеса и общества. Наши продукты позволяют на качественно новом уровене использовать информацию для анализа, оценки и планирования развития компании или региона.</p>
 						<a href="#">подробнее</a>
 					</div>
 					<div class="third-slide">
-						<h2>Автоматизированные системы управления и диспетчерские центры.</h2>
+						<h3>Автоматизированные системы управления и диспетчерские центры.</h3>
 						<p>Реализуем проекты автоматизации и диспетчеризации систем электро-, тепло- и водоснабжения, вентиляции и кондиционирования, АСКУЭиТ, крупных промышленных объектов и жилых комплексов, разработку и реализацию концепции «Умный дом» и «Умный город».</p>
 						<a href="#">подробнее</a>
 					</div>
 					<div class="slider-menu">
-						<ul class="slider-menu">
-							<li><a href="#">first</a></li>
-							<li><a href="#">second</a></li>
-							<li><a href="#">third</a></li>
-						</ul>
+							<a class="active" href="#">first</a>
+							<a href="#">second</a>
+							<a href="#">third</a>
 					</div>
 				</div>
 				<form class="search" action="" method="post" accept-charset="utf-8">
-					<input type="text" name="search_block_form" value="Поиск">	
-					<input type="submit" value="" name="ok"</p>
+					<input id="edit-search-block-form--2" class="form-text" type="text" maxlength="128" size="15" onfocus="if(this.value=='Поиск'){this.value='';}" onblur="if(this.value==''){this.value='Поиск';}" value="Поиск" name="search_block_form" title="Введите ключевые слова для поиска.">	
+					<input class="buton" type="submit" value="#" name="ok"</p>
 				</form>
 			</div>
 			
@@ -74,27 +73,27 @@
 						<a href="#">all news</a>
 						<img src="img/karta_proestate.jpg" alt="карта проекта">
 						<p>На выставке Proestate 2012 была представлена карта Санкт-Петербурга с девелоперскими проектами</p>
-						<span>15.09.2012</span>
+						<span class="date">15.09.2012</span>
 					</div>
-					<div class="even-sction">
+					<div class="even-section">
 						<h2>article</h2>
 						<span>/</span>
 						<a href="">all arcticle</a>
-						<img src="img/shp_karta_vektornaya.jpg" alt="векторная карта">
+						<img src="img/shp_karta_vektornaya.png" alt="векторная карта">
 						<p>Векторные shp карты в гис.</p>
-						<span>24.09.2012</span>
+						<span class="date">24.09.2012</span>
 					</div>
 				</div>
+				<h2>Направления деятельности</h2>
+				<ul class="bottom-block">
+					<li><span><a href="#">1.Разработка геоинформационных систем</a></span></li>
+					<li><span class="ico-2"><a href="#">2.Карты и базы геоданных по городам и регионам Росии</a></span></li>
+					<li><span class="ico-3"><a href="#">3.Обработка картографических данных</a></span></li>
+					<li><span class="ico-4"><a href="#">4.Создание автоматизированных центров управления и мониторинга</a></span></li>
+					<li><span class="ico-5"><a href="#">5.Разработка программного обеспечения</a></span></li>
+					<li><span class="ico-6"><a href="#">6.Геомаркетинг</a></span></li>
+				</ul>
 			</div>
-			<h2>Направления деятельности</h2>
-			<ul class="bottom-block">
-				<li><a href="#">1.Разработка геоинформационных систем</a></li>
-				<li><a href="#">2.Карты и базы геоданных по городам и регионам Росии</a></li>
-				<li><a href="#">3.Обработка картографических данных</a></li>
-				<li><a href="#">4.Создание автоматизированных центров управления и мониторинга</a></li>
-				<li><a href="#">5.Разработка программного обеспечения</a></li>
-				<li><a href="#">6.Геомаркетинг</a></li>
-			</ul>
 			<div class="footer">
 				<div class="footer-left">
 					<p>&copy; <strong>2013 giscyty</strong> Геоинформационные системы.
@@ -102,7 +101,7 @@
 					<p>Гис, гис инвестора, геоинформационные системы, векторные карты, базы гис, базы геоданных, webgis, веб гис, геоданные, картографические данные.</p>
 				</div>
 				<div class="footer-center">
-					<h3>Контакты</h3>
+					<h4>Контакты</h4>
 					<p>190005, Россия, Санкт-Петербург,наб. Обводного канала, 118А литер Б.</p>
 					<p>Тел./факс: +7 (812) 325-01-03</p>
 					<p>e-mail: <a href="mailto:gis@giscity.ru">gis@giscity.ru</a></p>

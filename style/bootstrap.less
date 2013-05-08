@@ -45,11 +45,11 @@
 .clearfix() {
   zoom: 1;
 	&:after {
-    display: block;
-    visibility: hidden;
-    height: 0;
-    clear: both;
-    content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	content: ".";
 	}
 }
 
@@ -71,37 +71,37 @@
 // Input placeholder text
 .placeholder(@color: @grayLight) {
   :-moz-placeholder {
-    color: @color;
+	color: @color;
   }
   ::-webkit-input-placeholder {
-    color: @color;
+	color: @color;
   }
 }
 
 // Font Stacks
 #font {
   .shorthand(@weight: normal, @size: 14px, @lineHeight: 20px) {
-    font-size: @size;
-    font-weight: @weight;
-    line-height: @lineHeight;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineHeight;
   }
   .sans-serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: @size;
-    font-weight: @weight;
-    line-height: @lineHeight;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineHeight;
   }
   .serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
-    font-family: "Georgia", Times New Roman, Times, sans-serif;
-    font-size: @size;
-    font-weight: @weight;
-    line-height: @lineHeight;
+	font-family: "Georgia", Times New Roman, Times, sans-serif;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineHeight;
   }
   .monospace(@weight: normal, @size: 12px, @lineHeight: 20px) {
-    font-family: "Monaco", Courier New, monospace;
-    font-size: @size;
-    font-weight: @weight;
-    line-height: @lineHeight;
+	font-family: "Monaco", Courier New, monospace;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineHeight;
   }
 }
 
@@ -117,7 +117,7 @@
   width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
   margin-left: @gridGutterWidth;
   &:first-child {
-    margin-left: 0;
+	margin-left: 0;
   }
 }
 .offset(@columnOffset: 1) {
@@ -167,16 +167,16 @@
   @shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.25);
   .box-shadow(@shadow);
   &:hover {
-    background-position: 0 -15px;
-    color: @textColor;
-    text-decoration: none;
+	background-position: 0 -15px;
+	color: @textColor;
+	text-decoration: none;
   }
 }
 
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 #translucent {
   .background(@color: @white, @alpha: 1) {
-    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
 	}
 	.border(@color: @white, @alpha: 1) {
 		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
@@ -187,43 +187,43 @@
 // Gradients
 #gradient {
   .horizontal (@startColor: #555, @endColor: #333) {
-    background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor)); /* Konqueror */
-    background-image: -moz-linear-gradient(left, @startColor, @endColor); /* FF 3.6+ */
-    background-image: -ms-linear-gradient(left, @startColor, @endColor); /* IE10 */
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
-    background-image: -webkit-linear-gradient(left, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-    background-image: -o-linear-gradient(left, @startColor, @endColor); /* Opera 11.10 */
-    background-image: linear-gradient(left, @startColor, @endColor); /* the standard */
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)",argb(@startColor),argb(@endColor))); /* IE6 & IE7 */
-    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)",argb(@startColor),argb(@endColor)); /* IE8+ */
+	background-repeat: repeat-x;
+	background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor)); /* Konqueror */
+	background-image: -moz-linear-gradient(left, @startColor, @endColor); /* FF 3.6+ */
+	background-image: -ms-linear-gradient(left, @startColor, @endColor); /* IE10 */
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(left, @startColor, @endColor); /* Opera 11.10 */
+	background-image: linear-gradient(left, @startColor, @endColor); /* the standard */
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)",argb(@startColor),argb(@endColor))); /* IE6 & IE7 */
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)",argb(@startColor),argb(@endColor)); /* IE8+ */
   }
 
   .vertical (@startColor: #555, @endColor: #333) {
-    background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Konqueror */
-    background-image: -moz-linear-gradient(@startColor, @endColor); /* FF 3.6+ */
-    background-image: -ms-linear-gradient(@startColor, @endColor); /* IE10 */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
-    background-image: -webkit-linear-gradient(@startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-    background-image: -o-linear-gradient(@startColor, @endColor); /* Opera 11.10 */
-    background-image: linear-gradient(@startColor, @endColor); /* the standard */
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)",argb(@startColor),argb(@endColor))); /* IE6 & IE7 */
-    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)",argb(@startColor),argb(@endColor)); /* IE8+ */
+	background-repeat: repeat-x;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Konqueror */
+	background-image: -moz-linear-gradient(@startColor, @endColor); /* FF 3.6+ */
+	background-image: -ms-linear-gradient(@startColor, @endColor); /* IE10 */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
+	background-image: -webkit-linear-gradient(@startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(@startColor, @endColor); /* Opera 11.10 */
+	background-image: linear-gradient(@startColor, @endColor); /* the standard */
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)",argb(@startColor),argb(@endColor))); /* IE6 & IE7 */
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)",argb(@startColor),argb(@endColor)); /* IE8+ */
   }
   .directional (@startColor: #555, @endColor: #333, @deg: 45deg) {
-    background-repeat: repeat-x;
-    background-image: -moz-linear-gradient(@deg, @startColor, @endColor); /* FF 3.6+ */
-    background-image: -ms-linear-gradient(@deg, @startColor, @endColor); /* IE10 */
-    background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-    background-image: -o-linear-gradient(@deg, @startColor, @endColor); /* Opera 11.10 */
-    background-image: linear-gradient(@deg, @startColor, @endColor); /* the standard */
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(@deg, @startColor, @endColor); /* FF 3.6+ */
+	background-image: -ms-linear-gradient(@deg, @startColor, @endColor); /* IE10 */
+	background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(@deg, @startColor, @endColor); /* Opera 11.10 */
+	background-image: linear-gradient(@deg, @startColor, @endColor); /* the standard */
   }
   .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 0.5, @endColor: #c3325f) {
-    background-repeat: no-repeat;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
-    background-image: -webkit-linear-gradient(@startColor, color-stop(@colorStop, @midColor), @endColor);
-    background-image: -moz-linear-gradient(@startColor, color-stop(@midColor, @colorStop), @endColor);
+	background-repeat: no-repeat;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+	background-image: -webkit-linear-gradient(@startColor, color-stop(@colorStop, @midColor), @endColor);
+	background-image: -moz-linear-gradient(@startColor, color-stop(@midColor, @colorStop), @endColor);
   }
 
 }
@@ -241,51 +241,51 @@
 #flexbox() {
   // #flexbox > .display-box; must be used along with other flexbox mixins
   .display-box {
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
+	display: -moz-box;
+	display: -webkit-box;
+	display: box;
   }
   // Box align [ start | end | center | baseline | stretch ]
   .box-align(@alignment: stretch) {
-    -moz-box-align: @alignment;
-    -webkit-box-align: @alignment;
-    box-align: @alignment;
+	-moz-box-align: @alignment;
+	-webkit-box-align: @alignment;
+	box-align: @alignment;
   }
   // Box direction [ normal | reverse | inherit ]
   .box-direction(@direction: normal) {
-    -moz-box-direction: @direction;
-    -webkit-box-direction: @direction;
-    box-direction: @direction;
+	-moz-box-direction: @direction;
+	-webkit-box-direction: @direction;
+	box-direction: @direction;
   }
   // Box flex [ integer ]
   .box-flex(@flex: 0) {
-    -moz-box-flex: @flex;
-    -webkit-box-flex: @flex;
-    box-flex: @flex;
+	-moz-box-flex: @flex;
+	-webkit-box-flex: @flex;
+	box-flex: @flex;
   }
   // Box flex group [ integer ]
   .box-flex-group(@group: 1) {
-    -moz-box-flex-group: @group;
-    -webkit-box-flex-group: @group;
-    box-flex-group: @group;
+	-moz-box-flex-group: @group;
+	-webkit-box-flex-group: @group;
+	box-flex-group: @group;
   }
   // Box orientation [ horizontal | vertical | inline-axis | block-axis | inherit ]
   .box-orient(@orientation: horizontal) {
-    -moz-box-orient: @orientation;
-    -webkit-box-orient: @orientation;
-    box-orient: @orientation;
+	-moz-box-orient: @orientation;
+	-webkit-box-orient: @orientation;
+	box-orient: @orientation;
   }
   // Box ordinal group [ integer ]
   .box-ordinal-group(@group: 1) {
-    -moz-box-ordinal-group: @group;
-    -webkit-box-ordinal-group:@group;
-    box-flex-ordinal-group: @group;
+	-moz-box-ordinal-group: @group;
+	-webkit-box-ordinal-group:@group;
+	box-flex-ordinal-group: @group;
   }
   // Box pack  [ start | end | center | justify ]
   .box-pack(@pack: start) {
-    -moz-box-pack: @pack;
-    -webkit-box-pack: @pack;
-    box-pack: @pack;
+	-moz-box-pack: @pack;
+	-webkit-box-pack: @pack;
+	box-pack: @pack;
   }
 }
 
@@ -293,84 +293,85 @@
 // & the Compass Reset utility - http://compass-style.org/reference/compass/reset/utilities/
 #reset() {
   .global-reset {
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      #reset > .reset-box-model;
-      #reset > .reset-font;
-    }
-    body {
-      #reset > .reset-body;
-    }
-    ol, ul {
-      #reset > .reset-list-style;
-    }
-    table {
-      #reset > .reset-table;
-    }
-    caption, th, td {
-      #reset > .reset-table-cell;
-    }
-    q, blockquote {
-      #reset > .reset-quotation;
-    }
-    a img {
-      #reset > .reset-image-anchor-border;
-    }
-    #reset > .reset-html5;
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+	  #reset > .reset-box-model;
+	  #reset > .reset-font;
+	}
+	body {
+	  #reset > .reset-body;
+	}
+	ol, ul {
+	  #reset > .reset-list-style;
+	}
+	table {
+	  #reset > .reset-table;
+	}
+	caption, th, td {
+	  #reset > .reset-table-cell;
+	}
+	q, blockquote {
+	  #reset > .reset-quotation;
+	}
+	a img {
+	  #reset > .reset-image-anchor-border;
+	}
+	#reset > .reset-html5;
   }
   .reset-box-model {
-    margin: 0;
-    padding: 0;
-    border: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
   }
   .reset-font {
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
   }
   .reset-focus {
-    outline: 0;
+	outline: 0;
   }
   .reset-body {
-    line-height: 1;
+	line-height: 1;
   }
   .reset-list-style {
-    list-style: none;
+	list-style: none;
   }
   .reset-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
   }
   .reset-table-cell {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
   }
   .reset-quotation {
-    quotes: none;
-    &:before, &:after {
-      content: "";
-      content: none;
-    }
+	quotes: none;
+	&:before, &:after {
+	  content: "";
+	  content: none;
+	}
   }
   .reset-image-anchor-border {
-    border: none;
+	border: none;
   }
   .reset-html5 {
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+	  display: block;
+	}
   }
 }
+

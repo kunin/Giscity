@@ -1,10 +1,296 @@
-/* Import */
-@import:"bootstrap";
-@import:"../fonts/fonts.css";
-/* Definition of colors */
+/* Import style */
+@import "bootstrap";
+@import "fonts.css";
 
 /* Definition of fonts */
 @sans-serif: Tahoma,Geneva,sans-serif;
 @myriad: "MyriadProBold";
 
-/* Definition of 
+/* Definition of colors*/
+@white:#fff;
+@body-white:#FDFDF5;
+@blue-green:#455765;
+@dark-blue:#184463;
+@dark-gray:#484848;
+@a-light-blue:#1C5B9A;
+@a-dark-gray:#143045;
+@black:#000;
+
+@font:12;
+
+#reset .global-reset;
+
+// basic elements
+body {
+	//main
+	font-family:@sans-serif;
+	color:@dark-gray;
+	font-size:12px;
+	text-transform:capitalize;
+
+	background: fixed @body-white repeat;
+	min-height:100%;
+	min-width:1000px;
+	height:100%;
+}
+	h2 {
+		font-family:@myriad;
+		font-size:24/@font*100%;
+	}
+
+	h3 {
+		font-family:@myriad;
+		font-size:24/@font*100%;
+		color:@white;
+	
+		text-shadow:0 1px 0 #1A4057;
+	}	
+
+	h4 {
+		font-size:14/@font*100%;
+		font-weight:bold;
+	}
+
+	li {
+		float:left;
+	}
+	
+	a {
+		color:@a-light-blue;
+		&:hover {color:@a-dark-gray}
+	}
+
+	// specific
+body {
+background:url('../img/index.jpg') 50% 61px no-repeat; 
+	div.menu {
+		width:100%;
+		background:url('../img/top.png') repeat-x;
+	.menu-inside {
+		background:url('../img/menu-separator.png') 100% 0 no-repeat; 
+		overflow:hidden;
+		margin:0 auto;
+		width:999px;
+		ul.menu {
+			li {
+				padding:0 4.52%;
+				height:61px;
+				background-image:url('../img/menu.png');
+				&:hover {
+					background:url('../img/menu.png') left bottom repeat-x;
+				}
+				a {
+					font-family:@myriad;
+					text-transform:uppercase;
+					color:@white;
+					text-decoration:none;
+					text-shadow:0 -1px 0 #000;
+					line-height:4.8;
+					font-size:13/@font*100%;
+					}
+				}
+			}		
+		}	
+	}
+	.top-block {
+		width:999px;
+		margin:0 auto;
+		overflow:hidden;
+		.odd-block {
+			margin-top:37px;
+			overflow:hidden;
+			li+li {background:url('../img/lang.png') no-repeat;}
+			li {
+				background:url('../img/lang.png') no-repeat left bottom;
+				height:17px;
+				padding-left:25px;
+				margin-right:25px;
+				line-height:1.5;
+				a {
+					color:#fff;
+					text-transform:capitalize;
+					text-decoration:none;
+					&:hover {color:@a-light-blue;}
+				}
+			}
+		}
+		.logo {
+			width:269px;
+			height:81px;
+			background:url('../img/logo.png') no-repeat;
+			text-indent:-100000px;
+			display:block;
+			margin-top:38px;
+			float:left;
+		}
+		.slider {
+			margin-top:50px;
+			width:300px;
+			float:right;
+			.first-slide {
+				p {
+					margin-top:15px;		
+					line-height:1.5;
+				}
+				h3 {
+					line-height:1.3;
+				}
+			}
+			.second-slide {
+				display:none;
+			}
+			.third-slide {
+				display:none;
+			}
+			.slider-menu {
+				overflow:hidden;
+				margin-top:20px;
+				a {
+					display:block;
+					width:18px; height:18px;
+					background:url('../img/bull.png') right top no-repeat;
+					text-indent:-100000px;
+					margin-right:15px;
+					float:left;
+					&:active {background:url('../img/bull.png') left top no-repeat;}
+				}
+				.active {
+					background:url('../img/bull.png') left top no-repeat;
+				}
+			}				
+		}
+		.search {
+			margin-top:711px;
+			clear:both;
+			width:290px; height:70px;
+			border:0 none;
+			background:url('../img/search.png') no-repeat;
+			.form-text {
+				margin:28px 0 0 78px;
+				width:145px;
+				border:0 none;
+				background-color:transparent;
+			}
+			.buton {
+				border:0 none;
+				width:36px; height:24px;
+				cursor:pointer;
+				background:url('../img/ok.png');
+				margin-left:20px;
+			}
+		}
+	}
+	.center-block {
+		width:999px;
+		margin:50px auto 0 auto;
+		line-height:1.5;
+		overflow:hidden;
+
+		.article {
+			float:left;
+			width:70%;
+		}
+		.aside {
+			float:right;
+			position:relative;
+			width:28%;
+				.odd-section, .even-section {
+					position:relative;
+					.date {
+						margin-top:30px;
+					}
+					
+					h2 {
+						display:inline;
+					}
+					img {
+						position:absolute;
+						left:0; top:40px;
+					}
+					p {
+						margin-left:90px;
+					}
+					.date {
+						margin-top:30px;
+						display:block;
+				}
+			}
+			.even-section {
+				margin-top:50px;
+				.date {
+					margin-top:83px;
+				}
+			}
+		}
+		h2 {
+			clear:both;
+		}
+		.bottom-block {
+			margin-top:30px;
+			li {
+				background:url('../img/service-block.png') center bottom no-repeat;
+				padding-top:1px;
+				margin-left:23px;
+				position:relative;
+				.ico-2 {
+					background:url('../img/ico/ico-service-2.png') no-repeat;
+				}
+				.ico-3 {
+					background:url('../img/ico/ico-service-3.png') no-repeat;
+				}
+				.ico-4 {
+					background:url('../img/ico/ico-service-4.png') no-repeat;
+				}
+				.ico-5 {
+					background:url('../img/ico/ico-service-5.png') no-repeat;
+				}
+				.ico-6 {
+					background:url('../img/ico/ico-service-6.png') center left no-repeat;
+				}
+			  span {
+					padding-top:1px;
+					width:310px; height:110px;
+					display:block;
+					background:url('../img/ico/ico-service-1.png') top left no-repeat;
+					a {						
+						display:block;
+						width:143px; height:70px;
+						margin:30px 0 0 166px;
+						color:@a-dark-gray;
+						&:hover {color:@black;}
+					}
+				}
+			}
+		}
+	}		
+		.footer {
+			background-color:#f2f2e1;
+			border-top:1px solid #c8baa5;
+			line-height:1.5;
+			margin-top:60px;
+			padding-top:20px;
+			overflow:hidden;
+			.footer-left {
+				float:left;
+				width:30%;
+				margin-left:10%;
+			}
+			.footer-center {
+				float:left;
+				width:33%;
+				margin-left:3%;
+			}
+			.footer-right {
+				float:right;
+				width:15%;
+				margin-right:4%;
+			}
+			p {
+				margin:10px 0;
+			}
+			strong {
+				font-weight:bold;
+			}
+		}
+	}
+
